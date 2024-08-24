@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> grid webpage</title>
+    <style>
+        .grid-container * {
+            background: darkred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1px;
+            margin-right: 1px;
+            color: whitesmoke;
+          }
+          .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 5fr ;
+            grid-template-rows: 5fr 20fr ;
+            grid-gap: 10px;
+            height: 720px;
+          }
+          header {
+            grid-column-start: 1;
+            grid-column-end: 4;
+          }
+          
+          footer {
+            grid-column-start: 1;
+            grid-column-end: 4;
+          }
+          .auto-fill {
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+          }
+          .auto-fit {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+            } 
+            .auto-fill {
+                grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+              }
+              .auto-fit {
+                grid-template-rows: repeat(auto-fit, minmax(150px, 1fr)); 
+                }      
+     
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="items">HEADER</header>
+        <nav class="items">SIDE-BAR</nav>
+        <div class="items contents">CONTENTS</div>
+        
+        <footer class="items">FOOTER</footer>
+      </div>
+</body>
+</html>
